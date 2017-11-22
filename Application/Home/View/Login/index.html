@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录演示</title>
+    <script src="http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+
+<fieldset>
+
+    <legend>登录演示</legend>
+    <input id="uname" name="uname" type="text"/><br/>
+    <input id="password" name="password" type="password"/><br/>
+    <input id="checkLogin" type="submit" value="登录"/>
+
+</fieldset>
+
+
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        $('#checkLogin').click(function(){
+           var $unameVal = $.trim($('#uname').val());
+           var $passwordVal = $.trim($('#password').val());
+           if($unameVal == '' || $passwordVal == ''){
+               alert("请输入用户名和密码");
+               return false;
+           }
+
+            /*
+             $.post(url,parameters,callback);
+             url : post提交的服务器端资源地址。
+             parameters: 需要传递到服务器端的参数。 参数形式为“键/值”。
+             callback : 在请求完成时被调用,这里我们通过$data来接收服务器返回的数据
+             */
+
+            alert("ssss");
+
+           $.post('{:U("Login/checkLogin")}',{uname:$unameVal,password:$passwordVal},function($data){
+
+                alert($data.info);
+                if($data.status == 1){
+                    location.href = $data.url;
+                }else{
+                    $('#uname').reset();
+                    $('#password').reset();
+                }
+            });
+
+        });
+    });
+
+</script>
+
+</html>
+
+
+

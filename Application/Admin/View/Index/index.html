@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<include file="Include:header" />-->
+    <!--<link type="text/css" rel="stylesheet" href="__PUBLIC__/Admin/css/user.css" />-->
+    <!--<script src="__ROOT__/Public/Admin/javascript/plug-ins/customScrollbar.min.js"></script>-->
+    <script src="__ROOT__/Public/Admin/javascript/pages/login.js"></script>
+    <title>登录</title>
+</head>
+<body class="login-page" style="">
+<!--登录页面-->
+
+<section class="login-contain">
+    <header>
+        <h1 style="font-size: 30px;font-weight: normal;">管&nbsp;&nbsp;理&nbsp;&nbsp;系&nbsp;&nbsp;统</h1>
+        <!--<p>login</p>-->
+    </header>
+    <div class="from-context">
+        <ul style="list-style-type:none">
+            <li>
+                <div>
+                    <label style="font-size: 24px">账&nbsp;&nbsp;号：</label>
+                    <input id="user_name" name="user_name" type="text" placeholder="输入用户名" style="font-size: 20px"/>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <label style="font-size: 24px">密&nbsp;&nbsp;码：</label>
+                    <input id="user_password" name="user_password" type="password" placeholder="输入密码" style="font-size: 20px"/>
+                </div>
+            </li>
+            <li style="text-align: center;">
+                <button id="entry" type="submit" style="margin: 20px;width: 350px;height: 35px">登录</button>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+</body>
+<style>
+    .login-page{
+        background: #657380;
+        background-size: cover;
+        height: 100%;
+    }
+    .login-contain{
+        text-align: center;
+        margin-top: 150px;
+    }
+    .login-contain header{
+        text-align: center;
+        padding: 30px 0;
+    }
+    .login-contain .from-context li{
+        margin: 25px;
+    }
+
+</style>
+</html>
